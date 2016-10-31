@@ -5,5 +5,3 @@ myvenv
 db.sqlite
 /static
 .DS_Store
-django-polls/
-mysite/
