@@ -1,3 +1,53 @@
+ul {
+   list-syle-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: #333;
+   border: 1px solid #e7e7e7;
+   background-color: #f3f3f3;
+
+   /*Fix the nav bar to the top*/
+   /*position: fixed;
+   top: 0;
+   width: 100%;*/
+}
+
+li {
+
+    float: left;
+    border-right: 2px solid #bbb;
+    /*border-top: 2px solid #bbb;
+    border-bottom: 2px solid #bbb;
+    border-left: 2px solid #bbb;
+    */
+}
+
+
+li:last-child {
+    border-right: none;
+}
+
 li a {
-   color: red;
+   display: block;
+   color: #666;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover:not(.active) {
+   background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50
+}
+
+
+body {
+     background: white url("images/headshot.jpg") no-repeat center;
+
+
 }

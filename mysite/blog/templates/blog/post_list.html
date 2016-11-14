@@ -11,17 +11,34 @@
       <h1 ><strong>Quintez Sims</h1> </strong>
     </div>
     <div>
+      <ul>
+	
+	<li><a href="#home">Home</a></li>
+	<li><a href="#works">Works</a></li>
+	<li><a href="#music">Music</a></li>
+	<li><a href="#comic">Comic Strips</a></li>
+	<li><a href="#photo">Photography</a></li>
+	<li style="float:right"><a href="#about">About</a></li>
+	
+      </ul>
+    </div>
+    </br>
+    </br>
+    </br>
+    </br>
+    <div>
       <h2><em>Your creative needs, in one place!</em></h2>
     </div>
 
     {% for post in posts %}
         <div>
-	  <p>published: {{ post.published_date }}</p>
 	  <h1><a href="">{{ post.title }}</a></h1>
 	  <p>{{ post.text |linebreaksbr }}</p>
+	  <p>published: {{ post.published_date }}</p>
 	  </div>
     {% endfor %}
     <br /> <br />
 
-    <ul><li><a href ="/polls">Polls App</a></li>
+    <p><strong><h1><a href ="/polls">Polls App</a></strong></h1></p>
+</body>
 </html>
