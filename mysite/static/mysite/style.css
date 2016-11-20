@@ -1,0 +1,11 @@
+#rcorners1 {
+    border-radius: 25px;
+    background: #73AD21;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+
+body {
+    background: white url("images/headshot2.jpg") no-repeat left;
+}

@@ -1,44 +1,79 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}"/>
-
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>QSims</title>
-  </head>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {margin: 16;}
 
-  <body>
-    <div>
-      <h1 ><strong>Quintez Sims</h1> </strong>
-    </div>
-    <div>
-      <ul>
-	
-	<li><a href="#home">Home</a></li>
-	<li><a href="#works">Works</a></li>
-	<li><a href="#music">Music</a></li>
-	<li><a href="#comic">Comic Strips</a></li>
-	<li><a href="#photo">Photography</a></li>
-	<li style="float:right"><a href="#about">About</a></li>
-	
-      </ul>
-    </div>
-    </br>
-    </br>
-    </br>
-    </br>
-    <div>
-      <h2><em>Your creative needs, in one place!</em></h2>
-    </div>
+ul.topnav { 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 
-    {% for post in posts %}
-        <div>
-	  <h1><a href="">{{ post.title }}</a></h1>
-	  <p>{{ post.text |linebreaksbr }}</p>
-	  <p>published: {{ post.published_date }}</p>
-	  </div>
-    {% endfor %}
-    <br /> <br />
+}
 
-    <p><strong><h1><a href ="/polls">Polls App</a></strong></h1></p>
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 18px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active:hover {background-color: #4CAF50;}
+
+ul.topnav li.lastchild(float: right;}
+
+@media screen and (max-width: 600px){
+    /*ul.topnav li.right,*/
+    ul.topnav li {float: none;}
+}
+</style>
+
+<title>QSims</title>
+</head>
+
+<body>
+
+<div style="padding:36px 0;">
+<h1 ><strong>Quintez Sims</h1> </strong>
+</div>
+
+
+<ul class="topnav">
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="#works">Works</a></li>
+    <li><a href="#music">Music</a></li>
+    <li><a href="#comic">Comic Strips</a></li>
+    <li><a href="#photo">Photography</a></li>
+    <li class="right"><a href="#about">About</a></li>
+</ul>
+
+</br></br></br></br>
+
+<div>
+<h2><em>Your creative needs, in one place!</em></h2>
+</div>
+
+{% for post in posts %}
+<div>	  
+<h1><a href="">{{ post.title }}</a></h1>
+<p>{{ post.text |linebreaksbr }}</p>
+<p>published: {{ post.published_date }}</p>
+</div>
+{% endfor %}
+
+<br /> <br />
+
+<p><strong><h1><a href ="/polls">Polls App</a></strong></h1></p>
+
 </body>
 </html>
